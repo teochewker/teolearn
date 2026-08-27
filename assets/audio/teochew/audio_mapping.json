@@ -1,0 +1,294 @@
+{
+  "你好": {
+    "english": "Hello",
+    "chaoyin": "le2 ho2",
+    "audio_files": [
+      "1100_6F088E2A.mp3",
+      "0797_F3530784.mp3"
+    ]
+  },
+  "再见": {
+    "english": "Goodbye",
+    "chaoyin": "zai3 giang3",
+    "audio_files": [
+      "1896_125A79D6.mp3",
+      "0577_FCAD756D.mp3"
+    ]
+  },
+  "谢谢": {
+    "english": "Thank you",
+    "chaoyin": "sia7 sia7",
+    "audio_files": [
+      "1608_8E70C249.mp3",
+      "1608_8E70C249.mp3"
+    ]
+  },
+  "对不起": {
+    "english": "Sorry",
+    "chaoyin": "dui3 bug4 ki2",
+    "audio_files": [
+      "0470_851BBA99.mp3",
+      "0151_90651178.mp3",
+      "0991_3EF008B4.mp3"
+    ]
+  },
+  "没关系": {
+    "english": "No problem",
+    "chaoyin": "mog8 guang1 hi6",
+    "audio_files": [
+      "1248_9669D5B5.mp3",
+      "0654_06713C32.mp3",
+      "0755_EB53DFC5.mp3"
+    ]
+  },
+  "早上好": {
+    "english": "Good morning",
+    "chaoyin": "za2 zion6 ho2",
+    "audio_files": [
+      "1890_7B76F83A.mp3",
+      "2006_BAC45AC1.mp3",
+      "0797_F3530784.mp3"
+    ]
+  },
+  "晚安": {
+    "english": "Good night",
+    "chaoyin": "mung2 uan1",
+    "audio_files": [
+      "1263_0A1619A5.mp3",
+      "1855_B90AE30B.mp3"
+    ]
+  },
+  "请问": {
+    "english": "Excuse me",
+    "chaoyin": "cian2 mung7",
+    "audio_files": [
+      "0208_4E05C84D.mp3",
+      "1266_10211987.mp3"
+    ]
+  },
+  "我叫": {
+    "english": "My name is",
+    "chaoyin": "ua2 gio3",
+    "audio_files": [
+      "1850_AA966182.mp3",
+      "0597_08974582.mp3"
+    ]
+  },
+  "很高兴认识你": {
+    "english": "Nice to meet you",
+    "chaoyin": "heng2 gao1 hêng1 ring7 sêg4 le2",
+    "audio_files": [
+      "0737_D541775D.mp3",
+      "0517_71579465.mp3",
+      "0745_E93587E9.mp3",
+      "1523_D02C228B.mp3",
+      "1590_9C839EC2.mp3",
+      "1100_6F088E2A.mp3"
+    ]
+  },
+  "食饭": {
+    "english": "Eat rice/meal",
+    "chaoyin": "ziah8 bung7",
+    "audio_files": [
+      "1962_8A6A2A02.mp3",
+      "0153_F81DB560.mp3"
+    ]
+  },
+  "喝水": {
+    "english": "Drink water",
+    "chaoyin": "hag4 zui2",
+    "audio_files": [
+      "0716_7860A878.mp3",
+      "2061_0844A234.mp3"
+    ]
+  },
+  "茶": {
+    "english": "Tea",
+    "chaoyin": "dê5",
+    "audio_files": [
+      "0340_279E3B5F.mp3"
+    ]
+  },
+  "好吃": {
+    "english": "Delicious",
+    "chaoyin": "ho2 ngeg4",
+    "audio_files": [
+      "0797_F3530784.mp3",
+      "1349_043403A6.mp3"
+    ]
+  },
+  "饭": {
+    "english": "Rice",
+    "chaoyin": "bung7",
+    "audio_files": [
+      "0153_F81DB560.mp3"
+    ]
+  },
+  "水": {
+    "english": "Water",
+    "chaoyin": "zui2",
+    "audio_files": [
+      "2061_0844A234.mp3"
+    ]
+  },
+  "肉": {
+    "english": "Meat",
+    "chaoyin": "nêg8",
+    "audio_files": [
+      "1295_16F96C6A.mp3"
+    ]
+  },
+  "鱼": {
+    "english": "Fish",
+    "chaoyin": "he5",
+    "audio_files": [
+      "0730_D59BA48C.mp3"
+    ]
+  },
+  "菜": {
+    "english": "Vegetable",
+    "chaoyin": "cai3",
+    "audio_files": [
+      "0161_0CEE52C9.mp3"
+    ]
+  },
+  "汤": {
+    "english": "Soup",
+    "chaoyin": "teng1",
+    "audio_files": [
+      "1752_CC9200EE.mp3"
+    ]
+  },
+  "糖": {
+    "english": "Sugar",
+    "chaoyin": "teng5",
+    "audio_files": [
+      "1754_DBF0AE75.mp3"
+    ]
+  },
+  "盐": {
+    "english": "Salt",
+    "chaoyin": "iam5",
+    "audio_files": [
+      "0893_251E1D41.mp3"
+    ]
+  },
+  "饱了": {
+    "english": "I'm full",
+    "chaoyin": "ba2 liao2",
+    "audio_files": [
+      "0032_9BA1394B.mp3",
+      "1129_1B9F9585.mp3"
+    ]
+  },
+  "饿": {
+    "english": "Hungry",
+    "chaoyin": "gho7",
+    "audio_files": [
+      "0688_E204CB55.mp3"
+    ]
+  },
+  "煮": {
+    "english": "To cook",
+    "chaoyin": "ze2",
+    "audio_files": [
+      "1918_71024986.mp3"
+    ]
+  },
+  "爸爸": {
+    "english": "Father",
+    "chaoyin": "ba1 ba1",
+    "audio_files": [
+      "0031_25761A2A.mp3",
+      "0031_25761A2A.mp3"
+    ]
+  },
+  "妈妈": {
+    "english": "Mother",
+    "chaoyin": "ma1 ma1",
+    "audio_files": [
+      "1191_71E10B73.mp3",
+      "1191_71E10B73.mp3"
+    ]
+  },
+  "阿公": {
+    "english": "Grandfather",
+    "chaoyin": "a1 gong1",
+    "audio_files": [
+      "0001_A234E9BB.mp3",
+      "0628_1A081DFD.mp3"
+    ]
+  },
+  "阿嬷": {
+    "english": "Grandmother",
+    "chaoyin": "a1 ma1",
+    "audio_files": [
+      "0001_A234E9BB.mp3",
+      "1191_71E10B73.mp3"
+    ]
+  },
+  "哥哥": {
+    "english": "Older brother",
+    "chaoyin": "go1 go1",
+    "audio_files": [
+      "0614_1D165754.mp3",
+      "0614_1D165754.mp3"
+    ]
+  },
+  "姐姐": {
+    "english": "Older sister",
+    "chaoyin": "zê2 zê2",
+    "audio_files": [
+      "1930_592352E1.mp3",
+      "1930_592352E1.mp3"
+    ]
+  },
+  "弟弟": {
+    "english": "Younger brother",
+    "chaoyin": "di6 di6",
+    "audio_files": [
+      "0355_B15017CD.mp3",
+      "0355_B15017CD.mp3"
+    ]
+  },
+  "妹妹": {
+    "english": "Younger sister",
+    "chaoyin": "muê7 muê7",
+    "audio_files": [
+      "1258_98A20772.mp3",
+      "1258_98A20772.mp3"
+    ]
+  },
+  "儿子": {
+    "english": "Son",
+    "chaoyin": "ri5 ze2",
+    "audio_files": [
+      "1503_8D40A40F.mp3",
+      "1918_71024986.mp3"
+    ]
+  },
+  "女儿": {
+    "english": "Daughter",
+    "chaoyin": "neng2 ri5",
+    "audio_files": [
+      "1288_1305C91E.mp3",
+      "1503_8D40A40F.mp3"
+    ]
+  },
+  "家": {
+    "english": "Home/Family",
+    "chaoyin": "gê1",
+    "audio_files": [
+      "0533_9CF1C7BC.mp3"
+    ]
+  },
+  "我爱你": {
+    "english": "I love you",
+    "chaoyin": "ua2 ain3 le2",
+    "audio_files": [
+      "1850_AA966182.mp3",
+      "2436_BC2A670C.mp3",
+      "1100_6F088E2A.mp3"
+    ]
+  }
+}
