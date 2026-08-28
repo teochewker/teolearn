@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                     '📚',
                     Colors.white,
                     0xFFE17076,
-                    () => _navigateTo(context, const FlowSelectionScreen()),
+                    () => _navigateTo(context, const VocabFlowSelectionScreen()),
                   ),
                   const SizedBox(height: 16),
                   _bigButton(

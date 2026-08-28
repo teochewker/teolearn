@@ -1,147 +1,130 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_tts/flutter_tts.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:audioplayers/audioplayers.dart';
 import 'dart:convert';
 import 'dart:async';
 
-/// TTS service — handles pronunciation for 4 languages.
-/// Teochew: plays real recorded audio files from teochewspot.com
-/// Cantonese: zh-HK TTS
-/// Mandarin: zh-CN TTS
-/// English: en-US TTS
+/// Audio service — plays real recorded audio files for all 4 languages.
+/// Teochew: real Teochew recordings from teochewspot.com
+/// Cantonese: Google Translate TTS (zh-HK)
+/// Mandarin: Google Translate TTS (zh-CN)
+/// English: Google Translate TTS (en-US)
 class TtsService extends ChangeNotifier {
-  FlutterTts? _tts;
   AudioPlayer? _audioPlayer;
   bool _initialized = false;
   bool _isSpeaking = false;
 
-  // Map of Chinese characters → list of audio file names
-  static Map<String, List<String>> _teochewAudioMap = {};
-  // Reverse map: Chinese phrase → audio files for that phrase
-  static Map<String, List<String>> _phraseAudioMap = {};
+  // Map: phrase ID → audio file names for each language
+  static final Map<String, Map<String, String>> _phraseAudioMap = {};
+  // Map: Chinese characters → phrase ID (for Teochew lookup)
+  static final Map<String, String> _charsToId = {};
 
   bool get isInitialized => _initialized;
   bool get isSpeaking => _isSpeaking;
 
   Future<void> init() async {
     if (_initialized) return;
-    _tts = FlutterTts();
-    await _tts!.setSpeechRate(0.4);
-    await _tts!.setVolume(1.0);
-    await _tts!.setPitch(1.0);
-    _tts!.setStartHandler(() {
-      _isSpeaking = true;
-      notifyListeners();
-    });
-    _tts!.setCompletionHandler(() {
-      _isSpeaking = false;
-      notifyListeners();
-    });
-    _tts!.setErrorHandler((msg) {
-      _isSpeaking = false;
-      notifyListeners();
-    });
     _audioPlayer = AudioPlayer();
+    _audioPlayer!.onPlayerComplete.listen((_) {
+      _isSpeaking = false;
+      notifyListeners();
+    });
     _initialized = true;
   }
 
-  /// Load the audio mapping from bundled assets
+  /// Load the audio mapping from bundled assets JSON
   Future<void> loadAudioMapping() async {
     if (!_initialized) await init();
-    // The audio mapping is loaded from assets/audio/teochew/audio_mapping.json
-    // This is done by the app at startup — see main.dart
+    try {
+      final jsonString = await rootBundle.loadString('assets/audio/teochew/audio_mapping.json');
+      final teochewMap = jsonDecode(jsonString) as Map<String, dynamic>;
+      
+      // Build chars → audio files mapping for Teochew
+      for (final entry in teochewMap.entries) {
+        final chars = entry.key;
+        final data = entry.value as Map<String, dynamic>;
+        final audioFiles = (data['audio_files'] as List?)?.cast<String>() ?? [];
+        if (audioFiles.isNotEmpty) {
+          _charsToId[chars] = audioFiles.join(',');
+        }
+      }
+      
+      // Load the main audio mapping (mandarin, cantonese, english)
+      try {
+        final mainJson = await rootBundle.loadString('assets/audio/audio_mapping.json');
+        final mainMap = jsonDecode(mainJson) as Map<String, dynamic>;
+        for (final entry in mainMap.entries) {
+          final id = entry.key;
+          final data = entry.value as Map<String, dynamic>;
+          _phraseAudioMap[id] = {
+            'mandarin': data['mandarin_audio'] as String? ?? '',
+            'cantonese': data['cantonese_audio'] as String? ?? '',
+            'english': data['english_audio'] as String? ?? '',
+          };
+        }
+      } catch (e) {
+        debugPrint('Could not load main audio mapping: $e');
+      }
+    } catch (e) {
+      debugPrint('Could not load Teochew audio mapping: $e');
+    }
   }
 
-  /// Set the Teochew audio mapping (called from main.dart after loading JSON)
+  /// Set the Teochew audio mapping (called from main.dart)
   void setTeochewAudioMap(Map<String, dynamic> mapping) {
-    _phraseAudioMap.clear();
     for (final entry in mapping.entries) {
       final chars = entry.key;
       final data = entry.value as Map<String, dynamic>;
       final audioFiles = (data['audio_files'] as List?)?.cast<String>() ?? [];
       if (audioFiles.isNotEmpty) {
-        _phraseAudioMap[chars] = audioFiles;
+        _charsToId[chars] = audioFiles.join(',');
       }
     }
   }
 
-  /// Speak [text] in [language]. Supported: 'teochew', 'cantonese', 'mandarin', 'english'.
-  /// For Teochew, plays real recorded audio files if available.
-  /// [chineseChars] is the Chinese characters for the phrase (used to look up Teochew audio).
-  Future<void> speak(String text, String language, {String? chineseChars}) async {
+  /// Play audio for [phraseId] in [language].
+  /// [chineseChars] is used for Teochew audio lookup.
+  Future<void> speak(String text, String language, {String? chineseChars, String? phraseId}) async {
     if (!_initialized) await init();
-    if (_tts == null) return;
+    if (_audioPlayer == null) return;
 
-    await _tts!.stop();
-    if (_audioPlayer != null) await _audioPlayer!.stop();
+    await _audioPlayer!.stop();
+
+    String? audioPath;
 
     if (language == 'teochew') {
-      // Try to play real Teochew audio
+      // Look up Teochew audio by Chinese characters
       final lookupChars = chineseChars ?? text;
-      if (_phraseAudioMap.containsKey(lookupChars)) {
-        final audioFiles = _phraseAudioMap[lookupChars]!;
-        await _playTeochewAudioFiles(audioFiles);
-        return;
+      if (_charsToId.containsKey(lookupChars)) {
+        final audioFiles = _charsToId[lookupChars]!.split(',');
+        if (audioFiles.isNotEmpty) {
+          audioPath = 'assets/audio/teochew/${audioFiles[0]}';
+        }
       }
-      // Fallback: use zh-CN TTS (Mandarin pronunciation of Chinese chars)
-      try {
-        await _tts!.setLanguage('zh-CN');
-        await _tts!.speak(lookupChars);
-      } catch (_) {
-        await _tts!.setLanguage('en-US');
-        await _tts!.speak(text);
+    } else if (phraseId != null && _phraseAudioMap.containsKey(phraseId)) {
+      final langAudio = _phraseAudioMap[phraseId]!;
+      final fileName = langAudio[language] ?? '';
+      if (fileName.isNotEmpty) {
+        audioPath = 'assets/audio/$language/$fileName';
       }
-      return;
     }
 
-    final langCode = _getLanguageCode(language);
-    try {
-      await _tts!.setLanguage(langCode);
-    } catch (_) {
-      await _tts!.setLanguage('en-US');
-    }
-    await _tts!.speak(text);
-  }
-
-  /// Play Teochew audio files sequentially
-  Future<void> _playTeochewAudioFiles(List<String> audioFiles) async {
-    if (_audioPlayer == null) return;
-    _isSpeaking = true;
-    notifyListeners();
-
-    for (final fileName in audioFiles) {
+    if (audioPath != null) {
+      _isSpeaking = true;
+      notifyListeners();
       try {
-        await _audioPlayer!.play(AssetSource('audio/teochew/$fileName'));
-        // Wait for each audio to finish
-        await _audioPlayer!.onPlayerComplete.first;
+        await _audioPlayer!.play(AssetSource('audio/$language/${audioPath.split('/').last}'));
       } catch (e) {
-        debugPrint('Error playing Teochew audio $fileName: $e');
+        debugPrint('Error playing audio: $e');
+        _isSpeaking = false;
+        notifyListeners();
       }
-    }
-
-    _isSpeaking = false;
-    notifyListeners();
-  }
-
-  String _getLanguageCode(String language) {
-    switch (language) {
-      case 'teochew':
-        return 'zh-CN'; // Fallback only — real audio used when available
-      case 'cantonese':
-        return 'zh-HK';
-      case 'mandarin':
-        return 'zh-CN';
-      case 'english':
-        return 'en-US';
-      default:
-        return 'en-US';
+    } else {
+      debugPrint('No audio file found for: $text ($language)');
     }
   }
 
   Future<void> stop() async {
-    if (_tts != null) {
-      await _tts!.stop();
-    }
     if (_audioPlayer != null) {
       await _audioPlayer!.stop();
     }
@@ -149,20 +132,8 @@ class TtsService extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<List<dynamic>> getAvailableLanguages() async {
-    if (!_initialized) await init();
-    if (_tts == null) return [];
-    try {
-      final langs = await _tts!.getLanguages;
-      return langs ?? [];
-    } catch (_) {
-      return [];
-    }
-  }
-
   @override
   void dispose() {
-    _tts?.stop();
     _audioPlayer?.dispose();
     super.dispose();
   }

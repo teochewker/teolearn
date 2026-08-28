@@ -31,9 +31,9 @@ class VocabFlowSelectionScreen extends StatelessWidget {
         ),
         child: ListView.builder(
           padding: const EdgeInsets.all(24),
-          itemCount: allVocabFlows.length,
+          itemCount: allFlows.length,
           itemBuilder: (context, index) {
-            final flow = allVocabFlows[index];
+            final flow = allFlows[index];
             return _VocabFlowCard(flow: flow);
           },
         ),

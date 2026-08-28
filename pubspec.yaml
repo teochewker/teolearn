@@ -29,3 +29,7 @@ flutter:
   assets:
     - assets/audio/teochew/
     - assets/audio/teochew/audio_mapping.json
+    - assets/audio/mandarin/
+    - assets/audio/cantonese/
+    - assets/audio/english/
+    - assets/audio/audio_mapping.json

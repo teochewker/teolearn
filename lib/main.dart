@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
 import 'services/tts_service.dart';
 import 'screens/home_screen.dart';
 import 'screens/flow_selection_screen.dart';
@@ -8,17 +7,10 @@ import 'screens/progress_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize TTS and load Teochew audio mapping
+  // Initialize TTS and load all audio mappings
   final ttsService = TtsService();
   await ttsService.init();
-  
-  try {
-    final audioJson = await DefaultAssetBundle.loadString('assets/audio/teochew/audio_mapping.json');
-    final audioMap = jsonDecode(audioJson) as Map<String, dynamic>;
-    ttsService.setTeochewAudioMap(audioMap);
-  } catch (e) {
-    debugPrint('Could not load Teochew audio mapping: $e');
-  }
+  await ttsService.loadAudioMapping();
   
   runApp(const TeoLearnApp());
 }
@@ -56,9 +48,9 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
 
-  final List<Widget> _screens = const [
+  final List<Widget> _screens = [
     HomeScreen(),
-    FlowSelectionScreen(),
+    VocabFlowSelectionScreen(),
     ProgressScreen(),
   ];
 

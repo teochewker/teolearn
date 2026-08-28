@@ -280,7 +280,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
         _bigButton('Next Flow', Icons.arrow_forward, 0xFF6C5CEC, () {
           Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(builder: (_) => const FlowSelectionScreen()),
+            MaterialPageRoute(builder: (_) => const VocabFlowSelectionScreen()),
             (route) => false,
           );
         }),

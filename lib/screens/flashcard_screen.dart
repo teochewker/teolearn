@@ -49,8 +49,8 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
     }
   }
 
-  void _speak(String text, String language, String? chineseChars) {
-    _tts.speak(text, language, chineseChars: chineseChars);
+  void _speak(String text, String language, String? chineseChars, String? phraseId) {
+    _tts.speak(text, language, chineseChars: chineseChars, phraseId: phraseId);
   }
 
   void _onSwipeEnd(int previousIndex, int targetIndex, SwiperActivity activity) {
