@@ -83,7 +83,7 @@ class TtsService extends ChangeNotifier {
       if (language == 'teochew') {
         // First try phrase ID lookup (Level 2)
         if (phraseId != null && _phraseAudioMap.containsKey(phraseId)) {
-          final teochewFile = _phraseAudioMap[phraseId]['teochew'] ?? '';
+          final teochewFile = _phraseAudioMap[phraseId]?['teochew'] ?? '';
           if (teochewFile.isNotEmpty) {
             audioPath = 'assets/audio/teochew/$teochewFile';
           }
