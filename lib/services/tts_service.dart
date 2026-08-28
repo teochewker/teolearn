@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'dart:async';
 
 /// Audio service — plays real recorded audio files for all 4 languages.
-/// Teochew: real Teochew recordings from teochewspot.com
+/// Teochew: real Teochew recordings from teochewspot.com (merged syllables)
 /// Cantonese: Google Translate TTS (yue/Cantonese)
 /// Mandarin: Google Translate TTS (zh-CN)
 /// English: Google Translate TTS (en-US)
@@ -14,8 +14,8 @@ class TtsService extends ChangeNotifier {
   bool _initialized = false;
   bool _isSpeaking = false;
 
-  // Map: Chinese characters → list of Teochew audio file names
-  static final Map<String, List<String>> _teochewAudioFiles = {};
+  // Map: Chinese characters → single merged Teochew audio file name
+  static final Map<String, String> _teochewAudioFile = {};
   // Map: phrase ID → audio file name for each language
   static final Map<String, Map<String, String>> _phraseAudioMap = {};
 
@@ -36,19 +36,19 @@ class TtsService extends ChangeNotifier {
   Future<void> loadAudioMapping() async {
     if (!_initialized) await init();
     
-    // Load Teochew audio mapping (Chinese chars → audio files)
+    // Load Teochew audio mapping (Chinese chars → single merged audio file)
     try {
       final jsonString = await rootBundle.loadString('assets/audio/teochew/audio_mapping.json');
       final teochewMap = jsonDecode(jsonString) as Map<String, dynamic>;
       for (final entry in teochewMap.entries) {
         final chars = entry.key;
         final data = entry.value as Map<String, dynamic>;
-        final audioFiles = (data['audio_files'] as List?)?.cast<String>() ?? [];
-        if (audioFiles.isNotEmpty) {
-          _teochewAudioFiles[chars] = audioFiles;
+        final audioFile = data['audio_file'] as String?;
+        if (audioFile != null && audioFile.isNotEmpty) {
+          _teochewAudioFile[chars] = audioFile;
         }
       }
-      debugPrint('Loaded ${_teochewAudioFiles.length} Teochew audio entries');
+      debugPrint('Loaded ${_teochewAudioFile.length} Teochew audio entries');
     } catch (e) {
       debugPrint('Could not load Teochew audio mapping: $e');
     }
@@ -84,15 +84,11 @@ class TtsService extends ChangeNotifier {
 
     try {
       if (language == 'teochew') {
-        // Look up Teochew audio by Chinese characters
+        // Look up Teochew audio by Chinese characters — single merged file
         final lookupChars = chineseChars ?? text;
-        if (_teochewAudioFiles.containsKey(lookupChars)) {
-          final audioFiles = _teochewAudioFiles[lookupChars]!;
-          // Play all audio files for this phrase sequentially
-          for (final fileName in audioFiles) {
-            await _audioPlayer!.play(AssetSource('audio/teochew/$fileName'));
-            await _audioPlayer!.onPlayerComplete.first;
-          }
+        if (_teochewAudioFile.containsKey(lookupChars)) {
+          final fileName = _teochewAudioFile[lookupChars]!;
+          await _audioPlayer!.play(AssetSource('audio/teochew/$fileName'));
         } else {
           debugPrint('No Teochew audio for: $lookupChars');
         }
@@ -101,7 +97,6 @@ class TtsService extends ChangeNotifier {
         final fileName = langAudio[language] ?? '';
         if (fileName.isNotEmpty) {
           await _audioPlayer!.play(AssetSource('audio/$language/$fileName'));
-          await _audioPlayer!.onPlayerComplete.first;
         }
       }
     } catch (e) {
