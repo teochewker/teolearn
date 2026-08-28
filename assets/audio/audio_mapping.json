@@ -1,362 +1,422 @@
 {
   "g1": {
     "english": "Hello",
+    "teochew": "你好",
     "mandarin": "你好",
     "cantonese": "你好",
+    "teochew_audio": "g1.mp3",
     "mandarin_audio": "g1.mp3",
     "cantonese_audio": "g1.mp3",
     "english_audio": "g1.mp3"
   },
   "g2": {
     "english": "Thank you",
+    "teochew": "谢谢",
     "mandarin": "谢谢",
-    "cantonese": "謝謝",
+    "cantonese": "谢谢",
+    "teochew_audio": "g2.mp3",
     "mandarin_audio": "g2.mp3",
     "cantonese_audio": "g2.mp3",
     "english_audio": "g2.mp3"
   },
   "g4": {
     "english": "I love you",
+    "teochew": "我爱你",
     "mandarin": "我爱你",
     "cantonese": "我愛你",
+    "teochew_audio": "g4.mp3",
     "mandarin_audio": "g4.mp3",
     "cantonese_audio": "g4.mp3",
     "english_audio": "g4.mp3"
   },
   "g6": {
     "english": "Good night",
+    "teochew": "晚安",
     "mandarin": "晚安",
     "cantonese": "晚安",
+    "teochew_audio": "g6.mp3",
     "mandarin_audio": "g6.mp3",
     "cantonese_audio": "g6.mp3",
     "english_audio": "g6.mp3"
   },
   "g7": {
     "english": "Goodbye",
+    "teochew": "再见",
     "mandarin": "再见",
     "cantonese": "再見",
+    "teochew_audio": "g7.mp3",
     "mandarin_audio": "g7.mp3",
     "cantonese_audio": "g7.mp3",
     "english_audio": "g7.mp3"
   },
   "g10": {
     "english": "See you again",
+    "teochew": "再见",
     "mandarin": "再见",
     "cantonese": "再見",
+    "teochew_audio": "g10.mp3",
     "mandarin_audio": "g10.mp3",
     "cantonese_audio": "g10.mp3",
     "english_audio": "g10.mp3"
   },
   "f2": {
     "english": "Water",
+    "teochew": "水",
     "mandarin": "水",
     "cantonese": "水",
+    "teochew_audio": "f2.mp3",
     "mandarin_audio": "f2.mp3",
     "cantonese_audio": "f2.mp3",
     "english_audio": "f2.mp3"
   },
   "f3": {
     "english": "Rice",
+    "teochew": "饭",
     "mandarin": "饭",
     "cantonese": "飯",
+    "teochew_audio": "f3.mp3",
     "mandarin_audio": "f3.mp3",
     "cantonese_audio": "f3.mp3",
     "english_audio": "f3.mp3"
   },
   "f5": {
     "english": "Tea",
+    "teochew": "茶",
     "mandarin": "茶",
     "cantonese": "茶",
+    "teochew_audio": "f5.mp3",
     "mandarin_audio": "f5.mp3",
     "cantonese_audio": "f5.mp3",
     "english_audio": "f5.mp3"
   },
   "f6": {
     "english": "Meat",
+    "teochew": "肉",
     "mandarin": "肉",
     "cantonese": "肉",
+    "teochew_audio": "f6.mp3",
     "mandarin_audio": "f6.mp3",
     "cantonese_audio": "f6.mp3",
     "english_audio": "f6.mp3"
   },
   "f7": {
     "english": "Vegetable",
+    "teochew": "菜",
     "mandarin": "菜",
     "cantonese": "菜",
+    "teochew_audio": "f7.mp3",
     "mandarin_audio": "f7.mp3",
     "cantonese_audio": "f7.mp3",
     "english_audio": "f7.mp3"
   },
   "f9": {
     "english": "Fish",
+    "teochew": "鱼",
     "mandarin": "鱼",
     "cantonese": "魚",
+    "teochew_audio": "f9.mp3",
     "mandarin_audio": "f9.mp3",
     "cantonese_audio": "f9.mp3",
     "english_audio": "f9.mp3"
   },
   "f10": {
     "english": "Soup",
+    "teochew": "汤",
     "mandarin": "汤",
     "cantonese": "湯",
+    "teochew_audio": "f10.mp3",
     "mandarin_audio": "f10.mp3",
     "cantonese_audio": "f10.mp3",
     "english_audio": "f10.mp3"
   },
   "f13": {
     "english": "Hungry",
+    "teochew": "饿",
     "mandarin": "饿",
     "cantonese": "餓",
+    "teochew_audio": "f13.mp3",
     "mandarin_audio": "f13.mp3",
     "cantonese_audio": "f13.mp3",
     "english_audio": "f13.mp3"
   },
   "fa1": {
     "english": "Father",
+    "teochew": "爸爸",
     "mandarin": "爸爸",
     "cantonese": "爸爸",
+    "teochew_audio": "fa1.mp3",
     "mandarin_audio": "fa1.mp3",
     "cantonese_audio": "fa1.mp3",
     "english_audio": "fa1.mp3"
   },
   "fa2": {
     "english": "Mother",
+    "teochew": "妈妈",
     "mandarin": "妈妈",
     "cantonese": "媽媽",
+    "teochew_audio": "fa2.mp3",
     "mandarin_audio": "fa2.mp3",
     "cantonese_audio": "fa2.mp3",
     "english_audio": "fa2.mp3"
   },
   "fa3": {
     "english": "Grandfather",
+    "teochew": "阿公",
     "mandarin": "爷爷",
     "cantonese": "阿公",
+    "teochew_audio": "fa3.mp3",
     "mandarin_audio": "fa3.mp3",
     "cantonese_audio": "fa3.mp3",
     "english_audio": "fa3.mp3"
   },
   "fa4": {
     "english": "Grandmother",
+    "teochew": "阿嬷",
     "mandarin": "奶奶",
     "cantonese": "阿嫲",
+    "teochew_audio": "fa4.mp3",
     "mandarin_audio": "fa4.mp3",
     "cantonese_audio": "fa4.mp3",
     "english_audio": "fa4.mp3"
   },
   "g2_1": {
     "english": "How are you today?",
+    "teochew": "你今日好无",
     "mandarin": "你今天好吗",
     "cantonese": "你今日好嗎",
+    "teochew_audio": "g2_1.mp3",
     "mandarin_audio": "g2_1.mp3",
     "cantonese_audio": "g2_1.mp3",
-    "english_audio": "g2_1.mp3",
-    "teochew_audio": "你今日好无.mp3"
+    "english_audio": "g2_1.mp3"
   },
   "g2_2": {
     "english": "I am fine, thank you",
+    "teochew": "我好谢谢",
     "mandarin": "我很好谢谢",
     "cantonese": "我好好多謝",
+    "teochew_audio": "g2_2.mp3",
     "mandarin_audio": "g2_2.mp3",
     "cantonese_audio": "g2_2.mp3",
-    "english_audio": "g2_2.mp3",
-    "teochew_audio": "我好谢谢.mp3"
+    "english_audio": "g2_2.mp3"
   },
   "g2_3": {
     "english": "What is your name?",
+    "teochew": "你叫什么名",
     "mandarin": "你叫什么名字",
     "cantonese": "你叫咩名",
+    "teochew_audio": "g2_3.mp3",
     "mandarin_audio": "g2_3.mp3",
     "cantonese_audio": "g2_3.mp3",
-    "english_audio": "g2_3.mp3",
-    "teochew_audio": "你叫什么名.mp3"
+    "english_audio": "g2_3.mp3"
   },
   "g2_4": {
     "english": "My name is...",
+    "teochew": "我个名是",
     "mandarin": "我的名字是",
     "cantonese": "我個名係",
+    "teochew_audio": "g2_4.mp3",
     "mandarin_audio": "g2_4.mp3",
     "cantonese_audio": "g2_4.mp3",
-    "english_audio": "g2_4.mp3",
-    "teochew_audio": "我个名是.mp3"
+    "english_audio": "g2_4.mp3"
   },
   "g2_5": {
     "english": "See you tomorrow",
+    "teochew": "明日见",
     "mandarin": "明天见",
     "cantonese": "聽日見",
+    "teochew_audio": "g2_5.mp3",
     "mandarin_audio": "g2_5.mp3",
     "cantonese_audio": "g2_5.mp3",
-    "english_audio": "g2_5.mp3",
-    "teochew_audio": "明日见.mp3"
+    "english_audio": "g2_5.mp3"
   },
   "g2_6": {
     "english": "Where are you going?",
+    "teochew": "你去底块",
     "mandarin": "你去哪里",
     "cantonese": "你去邊度",
+    "teochew_audio": "g2_6.mp3",
     "mandarin_audio": "g2_6.mp3",
     "cantonese_audio": "g2_6.mp3",
-    "english_audio": "g2_6.mp3",
-    "teochew_audio": "你去底块.mp3"
+    "english_audio": "g2_6.mp3"
   },
   "g2_7": {
     "english": "I am going home",
+    "teochew": "我转厝",
     "mandarin": "我回家",
     "cantonese": "我返屋企",
+    "teochew_audio": "g2_7.mp3",
     "mandarin_audio": "g2_7.mp3",
     "cantonese_audio": "g2_7.mp3",
-    "english_audio": "g2_7.mp3",
-    "teochew_audio": "我转厝.mp3"
+    "english_audio": "g2_7.mp3"
   },
   "g2_8": {
     "english": "Have you eaten?",
+    "teochew": "你食饱未",
     "mandarin": "你吃饭了吗",
     "cantonese": "你食咗飯未",
+    "teochew_audio": "g2_8.mp3",
     "mandarin_audio": "g2_8.mp3",
     "cantonese_audio": "g2_8.mp3",
-    "english_audio": "g2_8.mp3",
-    "teochew_audio": "你食饱未.mp3"
+    "english_audio": "g2_8.mp3"
   },
   "f2_1": {
     "english": "I want to eat rice",
+    "teochew": "我欲食饭",
     "mandarin": "我想吃饭",
     "cantonese": "我想食飯",
+    "teochew_audio": "f2_1.mp3",
     "mandarin_audio": "f2_1.mp3",
     "cantonese_audio": "f2_1.mp3",
-    "english_audio": "f2_1.mp3",
-    "teochew_audio": "我欲食饭.mp3"
+    "english_audio": "f2_1.mp3"
   },
   "f2_2": {
     "english": "The food is delicious",
+    "teochew": "物食好食",
     "mandarin": "饭菜很好吃",
     "cantonese": "啲餸好好食",
+    "teochew_audio": "f2_2.mp3",
     "mandarin_audio": "f2_2.mp3",
     "cantonese_audio": "f2_2.mp3",
-    "english_audio": "f2_2.mp3",
-    "teochew_audio": "物食好食.mp3"
+    "english_audio": "f2_2.mp3"
   },
   "f2_3": {
     "english": "I am thirsty",
+    "teochew": "我嘴干",
     "mandarin": "我口渴了",
     "cantonese": "我好渴",
+    "teochew_audio": "f2_3.mp3",
     "mandarin_audio": "f2_3.mp3",
     "cantonese_audio": "f2_3.mp3",
-    "english_audio": "f2_3.mp3",
-    "teochew_audio": "我嘴干.mp3"
+    "english_audio": "f2_3.mp3"
   },
   "f2_4": {
     "english": "Please give me water",
+    "teochew": "给杯水我",
     "mandarin": "请给我水",
     "cantonese": "俾杯水我",
+    "teochew_audio": "f2_4.mp3",
     "mandarin_audio": "f2_4.mp3",
     "cantonese_audio": "f2_4.mp3",
-    "english_audio": "f2_4.mp3",
-    "teochew_audio": "给杯水我.mp3"
+    "english_audio": "f2_4.mp3"
   },
   "f2_5": {
     "english": "I want to drink tea",
+    "teochew": "我欲食茶",
     "mandarin": "我想喝茶",
     "cantonese": "我想飲茶",
+    "teochew_audio": "f2_5.mp3",
     "mandarin_audio": "f2_5.mp3",
     "cantonese_audio": "f2_5.mp3",
-    "english_audio": "f2_5.mp3",
-    "teochew_audio": "我欲食茶.mp3"
+    "english_audio": "f2_5.mp3"
   },
   "f2_6": {
     "english": "What do you want to eat?",
+    "teochew": "你想食什么",
     "mandarin": "你想吃什么",
     "cantonese": "你想食咩",
+    "teochew_audio": "f2_6.mp3",
     "mandarin_audio": "f2_6.mp3",
     "cantonese_audio": "f2_6.mp3",
-    "english_audio": "f2_6.mp3",
-    "teochew_audio": "你想食什么.mp3"
+    "english_audio": "f2_6.mp3"
   },
   "f2_7": {
     "english": "I am full",
+    "teochew": "我食饱了",
     "mandarin": "我吃饱了",
     "cantonese": "我食飽喇",
+    "teochew_audio": "f2_7.mp3",
     "mandarin_audio": "f2_7.mp3",
     "cantonese_audio": "f2_7.mp3",
-    "english_audio": "f2_7.mp3",
-    "teochew_audio": "我食饱了.mp3"
+    "english_audio": "f2_7.mp3"
   },
   "f2_8": {
     "english": "Let's eat together",
+    "teochew": "俺相共食",
     "mandarin": "我们一起吃饭",
     "cantonese": "我哋一齊食飯",
+    "teochew_audio": "f2_8.mp3",
     "mandarin_audio": "f2_8.mp3",
     "cantonese_audio": "f2_8.mp3",
-    "english_audio": "f2_8.mp3",
-    "teochew_audio": "俺相共食.mp3"
+    "english_audio": "f2_8.mp3"
   },
   "fa2_1": {
     "english": "This is my father",
+    "teochew": "这个是我爸爸",
     "mandarin": "这是我爸爸",
     "cantonese": "呢個係我爸爸",
+    "teochew_audio": "fa2_1.mp3",
     "mandarin_audio": "fa2_1.mp3",
     "cantonese_audio": "fa2_1.mp3",
-    "english_audio": "fa2_1.mp3",
-    "teochew_audio": "这个是我爸爸.mp3"
+    "english_audio": "fa2_1.mp3"
   },
   "fa2_2": {
     "english": "This is my mother",
+    "teochew": "这个是我妈妈",
     "mandarin": "这是我妈妈",
     "cantonese": "呢個係我媽媽",
+    "teochew_audio": "fa2_2.mp3",
     "mandarin_audio": "fa2_2.mp3",
     "cantonese_audio": "fa2_2.mp3",
-    "english_audio": "fa2_2.mp3",
-    "teochew_audio": "这个是我妈妈.mp3"
+    "english_audio": "fa2_2.mp3"
   },
   "fa2_3": {
     "english": "I love my family",
+    "teochew": "爱我家人",
     "mandarin": "我爱我的家人",
     "cantonese": "我愛我嘅家人",
+    "teochew_audio": "fa2_3.mp3",
     "mandarin_audio": "fa2_3.mp3",
     "cantonese_audio": "fa2_3.mp3",
-    "english_audio": "fa2_3.mp3",
-    "teochew_audio": "我爱我家人.mp3"
+    "english_audio": "fa2_3.mp3"
   },
   "fa2_4": {
     "english": "Where is grandpa?",
+    "teochew": "阿公在底块",
     "mandarin": "爷爷在哪里",
     "cantonese": "阿爺喺邊",
+    "teochew_audio": "fa2_4.mp3",
     "mandarin_audio": "fa2_4.mp3",
     "cantonese_audio": "fa2_4.mp3",
-    "english_audio": "fa2_4.mp3",
-    "teochew_audio": "阿公在底块.mp3"
+    "english_audio": "fa2_4.mp3"
   },
   "fa2_5": {
     "english": "Grandma is cooking",
+    "teochew": "阿嬷在煮饭",
     "mandarin": "奶奶在做饭",
     "cantonese": "阿嫲煮緊飯",
+    "teochew_audio": "fa2_5.mp3",
     "mandarin_audio": "fa2_5.mp3",
     "cantonese_audio": "fa2_5.mp3",
-    "english_audio": "fa2_5.mp3",
-    "teochew_audio": "阿嬷在煮饭.mp3"
+    "english_audio": "fa2_5.mp3"
   },
   "fa2_6": {
     "english": "My brother is older than me",
+    "teochew": "哥哥大过我",
     "mandarin": "哥哥比我大",
     "cantonese": "哥哥大過我",
+    "teochew_audio": "fa2_6.mp3",
     "mandarin_audio": "fa2_6.mp3",
     "cantonese_audio": "fa2_6.mp3",
-    "english_audio": "fa2_6.mp3",
-    "teochew_audio": "哥哥大过我.mp3"
+    "english_audio": "fa2_6.mp3"
   },
   "fa2_7": {
     "english": "My sister is younger than me",
+    "teochew": "阿妹小过我",
     "mandarin": "妹妹比我小",
     "cantonese": "妹妹細過我",
+    "teochew_audio": "fa2_7.mp3",
     "mandarin_audio": "fa2_7.mp3",
     "cantonese_audio": "fa2_7.mp3",
-    "english_audio": "fa2_7.mp3",
-    "teochew_audio": "阿妹小过我.mp3"
+    "english_audio": "fa2_7.mp3"
   },
   "fa2_8": {
     "english": "We are a family",
+    "teochew": "俺是一家人",
     "mandarin": "我们是一家人",
     "cantonese": "我哋係一家人",
+    "teochew_audio": "fa2_8.mp3",
     "mandarin_audio": "fa2_8.mp3",
     "cantonese_audio": "fa2_8.mp3",
-    "english_audio": "fa2_8.mp3",
-    "teochew_audio": "俺是一家人.mp3"
+    "english_audio": "fa2_8.mp3"
   }
 }
