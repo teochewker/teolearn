@@ -1,8 +1,9 @@
 import '../models/flow.dart';
 import '../models/flashcard.dart';
 
-/// Vocabulary data — 18 phrases across 3 flows.
+/// Vocabulary data — 42 phrases across 6 flows (3 Level 1 + 3 Level 2).
 /// Teochew romanization uses the Geng-him system (tone numbers 1-8).
+/// Level 1: Single words. Level 2: Conversational phrases.
 
 final List<VocabFlow> allFlows = [
   VocabFlow(
@@ -227,9 +228,56 @@ final List<VocabFlow> allFlows = [
       ),
     ],
   ),
+  // === Level 2: Conversational Phrases ===
+  VocabFlow(
+    id: 'greetings2',
+    title: 'Greetings Phrases',
+    emoji: '💬',
+    colorValue: 0xFFE8932C,
+    cards: [
+      Flashcard(id: 'g2_1', teochewRomanized: 'le2 jin1 rig8 ho2 m7', teochewChinese: '你今日好无', cantoneseRomanized: 'nei5 gam1 jat6 hou2 maa3', cantoneseChinese: '你今日好嗎', mandarinRomanized: 'nǐ jīn tiān hǎo ma', mandarinChinese: '你今天好吗', english: 'How are you today?', emoji: '☀️'),
+      Flashcard(id: 'g2_2', teochewRomanized: 'ua2 ho2 sia7 sia7', teochewChinese: '我好谢谢', cantoneseRomanized: 'ngo5 hou2 hou2 do1 ze6', cantoneseChinese: '我好好多謝', mandarinRomanized: 'wǒ hěn hǎo xiè xiè', mandarinChinese: '我很好谢谢', english: 'I am fine, thank you', emoji: '😊'),
+      Flashcard(id: 'g2_3', teochewRomanized: 'le2 gio3 mian7 mian7', teochewChinese: '你叫什么名', cantoneseRomanized: 'nei5 giu3 me1 meng4', cantoneseChinese: '你叫咩名', mandarinRomanized: 'nǐ jiào shén me míng zì', mandarinChinese: '你叫什么名字', english: 'What is your name?', emoji: '❓'),
+      Flashcard(id: 'g2_4', teochewRomanized: 'ua2 gai3 mian7', teochewChinese: '我个名是', cantoneseRomanized: 'ngo5 go3 meng4 hai6', cantoneseChinese: '我個名係', mandarinRomanized: 'wǒ de míng zì shì', mandarinChinese: '我的名字是', english: 'My name is...', emoji: '📛'),
+      Flashcard(id: 'g2_5', teochewRomanized: 'meng5 rig8 keng5', teochewChinese: '明日见', cantoneseRomanized: 'ting1 jat6 gin3', cantoneseChinese: '聽日見', mandarinRomanized: 'míng tiān jiàn', mandarinChinese: '明天见', english: 'See you tomorrow', emoji: '📅'),
+      Flashcard(id: 'g2_6', teochewRomanized: 'le2 ki3 di7', teochewChinese: '你去底块', cantoneseRomanized: 'nei5 heoi3 bin1 dou6', cantoneseChinese: '你去邊度', mandarinRomanized: 'nǐ qù nǎ lǐ', mandarinChinese: '你去哪里', english: 'Where are you going?', emoji: '🤔'),
+      Flashcard(id: 'g2_7', teochewRomanized: 'ua2 tng3 ceng5', teochewChinese: '我转厝', cantoneseRomanized: 'ngo5 faan1 uk1 kei2', cantoneseChinese: '我返屋企', mandarinRomanized: 'wǒ huí jiā', mandarinChinese: '我回家', english: 'I am going home', emoji: '🏠'),
+      Flashcard(id: 'g2_8', teochewRomanized: 'le2 ziah8 ba2 bhe7', teochewChinese: '你食饱未', cantoneseRomanized: 'nei5 sik6 zo2 faan6 mei6', cantoneseChinese: '你食咗飯未', mandarinRomanized: 'nǐ chī fàn le ma', mandarinChinese: '你吃饭了吗', english: 'Have you eaten?', emoji: '🍽️'),
+    ],
+  ),
+  VocabFlow(
+    id: 'food2',
+    title: 'Food Phrases',
+    emoji: '🍽️',
+    colorValue: 0xFFE8932C,
+    cards: [
+      Flashcard(id: 'f2_1', teochewRomanized: 'ua2 ain7 ziah8 bung7', teochewChinese: '我欲食饭', cantoneseRomanized: 'ngo5 soeng2 sik6 faan6', cantoneseChinese: '我想食飯', mandarinRomanized: 'wǒ xiǎng chī fàn', mandarinChinese: '我想吃饭', english: 'I want to eat rice', emoji: '🍚'),
+      Flashcard(id: 'f2_2', teochewRomanized: 'mueh8 ziah8 ho2 ziah8', teochewChinese: '物食好食', cantoneseRomanized: 'di1 sung3 hou2 hou2 sik6', cantoneseChinese: '啲餸好好食', mandarinRomanized: 'cài hěn hǎo chī', mandarinChinese: '饭菜很好吃', english: 'The food is delicious', emoji: '😋'),
+      Flashcard(id: 'f2_3', teochewRomanized: 'ua2 cui3 ta1', teochewChinese: '我嘴干', cantoneseRomanized: 'ngo5 hou2 hot3', cantoneseChinese: '我好渴', mandarinRomanized: 'wǒ kǒu kě le', mandarinChinese: '我口渴了', english: 'I am thirsty', emoji: '🥤'),
+      Flashcard(id: 'f2_4', teochewRomanized: 'su3 teng5 ua2 zui2', teochewChinese: '给杯水我', cantoneseRomanized: 'bei2 bui1 seoi2 ngo5', cantoneseChinese: '俾杯水我', mandarinRomanized: 'qǐng gěi wǒ shuǐ', mandarinChinese: '请给我水', english: 'Please give me water', emoji: '💧'),
+      Flashcard(id: 'f2_5', teochewRomanized: 'ua2 ain7 ziah8 dê5', teochewChinese: '我欲食茶', cantoneseRomanized: 'ngo5 soeng2 jam2 caa4', cantoneseChinese: '我想飲茶', mandarinRomanized: 'wǒ xiǎng hē chá', mandarinChinese: '我想喝茶', english: 'I want to drink tea', emoji: '🍵'),
+      Flashcard(id: 'f2_6', teochewRomanized: 'le2 ain7 ziah8 mui7', teochewChinese: '你想食什么', cantoneseRomanized: 'nei5 soeng2 sik6 me1', cantoneseChinese: '你想食咩', mandarinRomanized: 'nǐ xiǎng chī shén me', mandarinChinese: '你想吃什么', english: 'What do you want to eat?', emoji: '🤔'),
+      Flashcard(id: 'f2_7', teochewRomanized: 'ua2 ziah8 ba2 liao2', teochewChinese: '我食饱了', cantoneseRomanized: 'ngo5 sik6 baau2 laa3', cantoneseChinese: '我食飽喇', mandarinRomanized: 'wǒ chī bǎo le', mandarinChinese: '我吃饱了', english: 'I am full', emoji: '🫃'),
+      Flashcard(id: 'f2_8', teochewRomanized: 'an7 sion1 geng7 ziah8', teochewChinese: '俺相共食', cantoneseRomanized: 'ngo5 dei6 jat1 cai4 sik6 faan6', cantoneseChinese: '我哋一齊食飯', mandarinRomanized: 'wǒ men yī qǐ chī fàn', mandarinChinese: '我们一起吃饭', english: "Let's eat together", emoji: '👥'),
+    ],
+  ),
+  VocabFlow(
+    id: 'family2',
+    title: 'Family Phrases',
+    emoji: '👨‍👩‍👧‍👦',
+    colorValue: 0xFF6CACE4,
+    cards: [
+      Flashcard(id: 'fa2_1', teochewRomanized: 'tseng5 si6 ua2 bê bê', teochewChinese: '这个是我爸爸', cantoneseRomanized: 'ni1 go3 hai6 ngo5 baa1 baa1', cantoneseChinese: '呢個係我爸爸', mandarinRomanized: 'zhè shì wǒ bà ba', mandarinChinese: '这是我爸爸', english: 'This is my father', emoji: '👨'),
+      Flashcard(id: 'fa2_2', teochewRomanized: 'tseng5 si6 ua2 mê mê', teochewChinese: '这个是我妈妈', cantoneseRomanized: 'ni1 go3 hai6 ngo5 maa1 maa1', cantoneseChinese: '呢個係我媽媽', mandarinRomanized: 'zhè shì wǒ mā ma', mandarinChinese: '这是我妈妈', english: 'This is my mother', emoji: '👩'),
+      Flashcard(id: 'fa2_3', teochewRomanized: 'ua2 ain3 ua2 gê1 rin5', teochewChinese: '爱我家人', cantoneseRomanized: 'ngo5 oi3 ngo5 ge3 gaa1 jan4', cantoneseChinese: '我愛我嘅家人', mandarinRomanized: 'wǒ ài wǒ de jiā rén', mandarinChinese: '我爱我的家人', english: 'I love my family', emoji: '❤️'),
+      Flashcard(id: 'fa2_4', teochewRomanized: 'a gong di7 do6', teochewChinese: '阿公在底块', cantoneseRomanized: 'aa4 je4 hai2 bin1', cantoneseChinese: '阿爺喺邊', mandarinRomanized: 'yé ye zài nǎ lǐ', mandarinChinese: '爷爷在哪里', english: 'Where is grandpa?', emoji: '👴'),
+      Flashcard(id: 'fa2_5', teochewRomanized: 'a ma di7 ze2 bung7', teochewChinese: '阿嬷在煮饭', cantoneseRomanized: 'aa4 maa4 zyu2 gan2 faan6', cantoneseChinese: '阿嫲煮緊飯', mandarinRomanized: 'nǎi nai zài zuò fàn', mandarinChinese: '奶奶在做饭', english: 'Grandma is cooking', emoji: '👩‍🍳'),
+      Flashcard(id: 'fa2_6', teochewRomanized: 'go go dua7 gue7 ua2', teochewChinese: '哥哥大过我', cantoneseRomanized: 'go1 go1 daai6 gwo3 ngo5', cantoneseChinese: '哥哥大過我', mandarinRomanized: 'gē ge bǐ wǒ dà', mandarinChinese: '哥哥比我大', english: 'My brother is older than me', emoji: '👦'),
+      Flashcard(id: 'fa2_7', teochewRomanized: 'a muê7 so3 gue7 ua2', teochewChinese: '阿妹小过我', cantoneseRomanized: 'mui6 mui4 sai3 gwo3 ngo5', cantoneseChinese: '妹妹細過我', mandarinRomanized: 'mèi mei bǐ wǒ xiǎo', mandarinChinese: '妹妹比我小', english: 'My sister is younger than me', emoji: '👧'),
+      Flashcard(id: 'fa2_8', teochewRomanized: 'an7 si6 zek8 gê1 rin5', teochewChinese: '俺是一家人', cantoneseRomanized: 'ngo5 dei6 hai6 jat1 gaa1 jan4', cantoneseChinese: '我哋係一家人', mandarinRomanized: 'wǒ men shì yī jiā rén', mandarinChinese: '我们是一家人', english: 'We are a family', emoji: '👨‍👩‍👧‍👦'),
+    ],
+  ),
 ];
-
-/// Get a flow by id.
 VocabFlow? getFlowById(String id) {
   for (final f in allFlows) {
     if (f.id == id) return f;
