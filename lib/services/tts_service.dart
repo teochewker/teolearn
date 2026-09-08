@@ -7,9 +7,14 @@ import 'dart:convert';
 /// Teochew + Mandarin: native speaker from YouTube @villagestory99
 /// English: Google Translate TTS
 class TtsService extends ChangeNotifier {
+  static final TtsService _instance = TtsService._internal();
+  factory TtsService() => _instance;
+  TtsService._internal();
+
   AudioPlayer? _audioPlayer;
   bool _initialized = false;
   bool _isSpeaking = false;
+  bool _mappingLoaded = false;
 
   static final Map<String, Map<String, String>> _audioMap = {};
 
@@ -27,6 +32,7 @@ class TtsService extends ChangeNotifier {
   }
 
   Future<void> loadAudioMapping() async {
+    if (_mappingLoaded) return;
     if (!_initialized) await init();
     try {
       final jsonString = await rootBundle.loadString('assets/audio/audio_mapping.json');
@@ -40,6 +46,7 @@ class TtsService extends ChangeNotifier {
           'english': data['english_audio'] as String? ?? '',
         };
       }
+      _mappingLoaded = true;
       debugPrint('Loaded ${_audioMap.length} audio entries');
     } catch (e) {
       debugPrint('Could not load audio mapping: $e');
@@ -84,7 +91,7 @@ class TtsService extends ChangeNotifier {
 
   @override
   void dispose() {
-    _audioPlayer?.dispose();
+    // Singleton — don't actually dispose the audio player
     super.dispose();
   }
 }

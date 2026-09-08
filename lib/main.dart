@@ -8,9 +8,14 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
   // Initialize TTS and load all audio mappings
-  final ttsService = TtsService();
-  await ttsService.init();
-  await ttsService.loadAudioMapping();
+  try {
+    final ttsService = TtsService();
+    await ttsService.init();
+    await ttsService.loadAudioMapping();
+  } catch (e) {
+    // Don't block app launch if audio loading fails
+    debugPrint('Audio init error: $e');
+  }
   
   runApp(const TeoLearnApp());
 }
