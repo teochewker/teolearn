@@ -3,17 +3,14 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:audioplayers/audioplayers.dart';
 import 'dart:convert';
 
-/// Audio service — plays real recorded audio files for all 4 languages.
-/// Teochew: Fish Audio TTS (full phrase, natural pronunciation)
-/// Cantonese: Google Translate TTS (yue)
-/// Mandarin: Google Translate TTS (zh-CN)
-/// English: Google Translate TTS (en-US)
+/// Audio service — plays audio files for 3 languages.
+/// Teochew + Mandarin: native speaker from YouTube @villagestory99
+/// English: Google Translate TTS
 class TtsService extends ChangeNotifier {
   AudioPlayer? _audioPlayer;
   bool _initialized = false;
   bool _isSpeaking = false;
 
-  // Map: phrase ID → {language → audio filename}
   static final Map<String, Map<String, String>> _audioMap = {};
 
   bool get isInitialized => _initialized;
@@ -40,7 +37,6 @@ class TtsService extends ChangeNotifier {
         _audioMap[id] = {
           'teochew': data['teochew_audio'] as String? ?? '',
           'mandarin': data['mandarin_audio'] as String? ?? '',
-          'cantonese': data['cantonese_audio'] as String? ?? '',
           'english': data['english_audio'] as String? ?? '',
         };
       }

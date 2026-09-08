@@ -3,12 +3,11 @@ import '../models/flashcard.dart';
 import 'pronunciation_button.dart';
 
 /// SwipeCard — a single flashcard shown in the swiper.
-/// Displays the phrase in 4 languages; tap any to hear TTS.
+/// Displays the phrase in 3 languages: Teochew, Mandarin, English.
 class SwipeCard extends StatelessWidget {
   final Flashcard card;
   final Color accentColor;
 
-  /// Called with (text, languageKey, chineseChars, phraseId) when a language is tapped.
   final void Function(String text, String language, String? chineseChars, String? phraseId) onSpeak;
 
   const SwipeCard({
@@ -43,7 +42,6 @@ class SwipeCard extends StatelessWidget {
                     style: const TextStyle(fontSize: 40),
                   ),
                 ),
-              // Top label: English in large text
               Container(
                 padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 20),
                 decoration: BoxDecoration(
@@ -53,60 +51,43 @@ class SwipeCard extends StatelessWidget {
                 child: Text(
                   card.english,
                   style: TextStyle(
-                    fontSize: 24,
+                    fontSize: 22,
                     fontWeight: FontWeight.w800,
                     color: accentColor,
                   ),
                 ),
               ),
               const SizedBox(height: 16),
-              // 4 language buttons in 2x2 grid
-              Row(
-                children: [
-                  PronunciationButton(
-                    label: 'Teochew',
-                    romanized: card.teochewRomanized,
-                    chinese: card.teochewChinese,
-                    languageKey: 'teochew',
-                    color: const Color(0xFFE17076),
-                    onTap: () =>
-                        onSpeak(card.teochewRomanized, 'teochew', card.teochewChinese, card.id),
-                  ),
-                  PronunciationButton(
-                    label: 'Cantonese',
-                    romanized: card.cantoneseRomanized,
-                    chinese: card.cantoneseChinese,
-                    languageKey: 'cantonese',
-                    color: const Color(0xFF6CACE4),
-                    onTap: () =>
-                        onSpeak(card.cantoneseRomanized, 'cantonese', null, card.id),
-                  ),
-                ],
+              // 3 language buttons
+              PronunciationButton(
+                label: 'Teochew (潮汕话)',
+                romanized: card.teochewChinese,
+                chinese: card.teochewChinese,
+                languageKey: 'teochew',
+                color: const Color(0xFFE17076),
+                onTap: () =>
+                    onSpeak(card.teochewChinese, 'teochew', card.teochewChinese, card.id),
               ),
               const SizedBox(height: 8),
-              Row(
-                children: [
-                  PronunciationButton(
-                    label: 'Mandarin',
-                    romanized: card.mandarinRomanized,
-                    chinese: card.mandarinChinese,
-                    languageKey: 'mandarin',
-                    color: const Color(0xFFE8932C),
-                    onTap: () =>
-                        onSpeak(card.mandarinRomanized, 'mandarin', null, card.id),
-                  ),
-                  PronunciationButton(
-                    label: 'English',
-                    romanized: card.english,
-                    chinese: '',
-                    languageKey: 'english',
-                    color: const Color(0xFF5CB85C),
-                    onTap: () => onSpeak(card.english, 'english', null, card.id),
-                  ),
-                ],
+              PronunciationButton(
+                label: 'Mandarin (普通话)',
+                romanized: card.mandarinChinese,
+                chinese: card.mandarinChinese,
+                languageKey: 'mandarin',
+                color: const Color(0xFFE8932C),
+                onTap: () =>
+                    onSpeak(card.mandarinChinese, 'mandarin', null, card.id),
+              ),
+              const SizedBox(height: 8),
+              PronunciationButton(
+                label: 'English',
+                romanized: card.english,
+                chinese: '',
+                languageKey: 'english',
+                color: const Color(0xFF5CB85C),
+                onTap: () => onSpeak(card.english, 'english', null, card.id),
               ),
               const SizedBox(height: 16),
-              // Hint text
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
