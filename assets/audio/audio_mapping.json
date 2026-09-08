@@ -1,174 +1,203 @@
 {
   "greetings_1": {
     "english": "How to greet",
+    "mandarin": "你好",
     "teochew_audio": "greetings_1.mp3",
     "mandarin_audio": "greetings_1.mp3",
     "english_audio": "greetings_1.mp3"
   },
   "greetings_2": {
     "english": "Sorry",
+    "mandarin": "对不起",
     "teochew_audio": "greetings_2.mp3",
     "mandarin_audio": "greetings_2.mp3",
     "english_audio": "greetings_2.mp3"
   },
   "greetings_3": {
     "english": "No problem",
+    "mandarin": "没事",
     "teochew_audio": "greetings_3.mp3",
     "mandarin_audio": "greetings_3.mp3",
     "english_audio": "greetings_3.mp3"
   },
   "greetings_4": {
     "english": "Where are you going?",
+    "mandarin": "你要去哪里",
     "teochew_audio": "greetings_4.mp3",
     "mandarin_audio": "greetings_4.mp3",
     "english_audio": "greetings_4.mp3"
   },
   "greetings_5": {
     "english": "Where do you live?",
+    "mandarin": "你住哪里",
     "teochew_audio": "greetings_5.mp3",
     "mandarin_audio": "greetings_5.mp3",
     "english_audio": "greetings_5.mp3"
   },
   "greetings_6": {
     "english": "Happy birthday",
+    "mandarin": "生日快乐",
     "teochew_audio": "greetings_6.mp3",
     "mandarin_audio": "greetings_6.mp3",
     "english_audio": "greetings_6.mp3"
   },
   "greetings_7": {
     "english": "Happy",
+    "mandarin": "开心",
     "teochew_audio": "greetings_7.mp3",
     "mandarin_audio": "greetings_7.mp3",
     "english_audio": "greetings_7.mp3"
   },
   "greetings_9": {
     "english": "Done yet?",
+    "mandarin": "好了没",
     "teochew_audio": "greetings_9.mp3",
     "mandarin_audio": "greetings_9.mp3",
     "english_audio": "greetings_9.mp3"
   },
   "greetings_10": {
     "english": "What are you doing?",
+    "mandarin": "干嘛",
     "teochew_audio": "greetings_10.mp3",
     "mandarin_audio": "greetings_10.mp3",
     "english_audio": "greetings_10.mp3"
   },
   "food_1": {
     "english": "What to eat tonight?",
+    "mandarin": "今晚吃什么",
     "teochew_audio": "food_1.mp3",
     "mandarin_audio": "food_1.mp3",
     "english_audio": "food_1.mp3"
   },
   "food_2": {
     "english": "What to eat for lunch?",
+    "mandarin": "中午吃什么",
     "teochew_audio": "food_2.mp3",
     "mandarin_audio": "food_2.mp3",
     "english_audio": "food_2.mp3"
   },
   "food_3": {
     "english": "Drink more hot water",
+    "mandarin": "多喝热水",
     "teochew_audio": "food_3.mp3",
     "mandarin_audio": "food_3.mp3",
     "english_audio": "food_3.mp3"
   },
   "food_4": {
     "english": "Buying food",
+    "mandarin": "买菜",
     "teochew_audio": "food_4.mp3",
     "mandarin_audio": "food_4.mp3",
     "english_audio": "food_4.mp3"
   },
   "food_5": {
     "english": "These meats",
+    "mandarin": "这些肉",
     "teochew_audio": "food_5.mp3",
     "mandarin_audio": "food_5.mp3",
     "english_audio": "food_5.mp3"
   },
   "food_6": {
     "english": "These seafoods",
+    "mandarin": "这些海鲜",
     "teochew_audio": "food_6.mp3",
     "mandarin_audio": "food_6.mp3",
     "english_audio": "food_6.mp3"
   },
   "food_7": {
     "english": "Fruits",
+    "mandarin": "水果",
     "teochew_audio": "food_7.mp3",
     "mandarin_audio": "food_7.mp3",
     "english_audio": "food_7.mp3"
   },
   "food_8": {
     "english": "Don't want",
+    "mandarin": "不要",
     "teochew_audio": "food_8.mp3",
     "mandarin_audio": "food_8.mp3",
     "english_audio": "food_8.mp3"
   },
   "food_9": {
     "english": "How much?",
+    "mandarin": "多少",
     "teochew_audio": "food_9.mp3",
     "mandarin_audio": "food_9.mp3",
     "english_audio": "food_9.mp3"
   },
   "food_10": {
     "english": "Goji berry",
+    "mandarin": "枸杞",
     "teochew_audio": "food_10.mp3",
     "mandarin_audio": "food_10.mp3",
     "english_audio": "food_10.mp3"
   },
   "daily_1": {
     "english": "Hurry up",
+    "mandarin": "快点",
     "teochew_audio": "daily_1.mp3",
     "mandarin_audio": "daily_1.mp3",
     "english_audio": "daily_1.mp3"
   },
   "daily_2": {
     "english": "Can or not?",
+    "mandarin": "可不可以",
     "teochew_audio": "daily_2.mp3",
     "mandarin_audio": "daily_2.mp3",
     "english_audio": "daily_2.mp3"
   },
   "daily_3": {
     "english": "When?",
+    "mandarin": "什么时候",
     "teochew_audio": "daily_3.mp3",
     "mandarin_audio": "daily_3.mp3",
     "english_audio": "daily_3.mp3"
   },
   "daily_4": {
     "english": "Here, there, where",
+    "mandarin": "这里",
     "teochew_audio": "daily_4.mp3",
     "mandarin_audio": "daily_4.mp3",
     "english_audio": "daily_4.mp3"
   },
   "daily_5": {
     "english": "Bring phone",
+    "mandarin": "带手机",
     "teochew_audio": "daily_5.mp3",
     "mandarin_audio": "daily_5.mp3",
     "english_audio": "daily_5.mp3"
   },
   "daily_6": {
     "english": "Clothes",
+    "mandarin": "衣服",
     "teochew_audio": "daily_6.mp3",
     "mandarin_audio": "daily_6.mp3",
     "english_audio": "daily_6.mp3"
   },
   "daily_7": {
     "english": "So hot today",
+    "mandarin": "天气好热",
     "teochew_audio": "daily_7.mp3",
     "mandarin_audio": "daily_7.mp3",
     "english_audio": "daily_7.mp3"
   },
   "daily_8": {
     "english": "No work today",
+    "mandarin": "今天不用上班",
     "teochew_audio": "daily_8.mp3",
     "mandarin_audio": "daily_8.mp3",
     "english_audio": "daily_8.mp3"
   },
   "daily_9": {
     "english": "I can hear but can't speak",
+    "mandarin": "我会听不会讲",
     "teochew_audio": "daily_9.mp3",
     "mandarin_audio": "daily_9.mp3",
     "english_audio": "daily_9.mp3"
   },
   "daily_10": {
     "english": "No time",
+    "mandarin": "没空",
     "teochew_audio": "daily_10.mp3",
     "mandarin_audio": "daily_10.mp3",
     "english_audio": "daily_10.mp3"
